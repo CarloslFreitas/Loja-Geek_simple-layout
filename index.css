@@ -1,24 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 body{
     margin: 0;
     padding: 0;
     height: 100vh;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
 }
 
 header{
-    
-    border: 2px solid black;
-    margin: 15px;
-    height: 15%;
+    border: 1px solid;
 }
-main{
-    border: 2px solid black;
-    margin: 15px;
-    height: 80%;
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid;
+    margin: 10px;
+}
+#logo_div{
+    border: 1px solid;
+    margin: 10px;
+}
+#div_nav{
+    border: 1px solid;
+    margin: 10px;
+}
+#ul_nav{
+    display: flex;
+}
+button{
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+
+}
+button:hover{
+    
 }
 
+main{
+    border: 1px solid;
+    margin: 10px;
+}
 section{
-    border: 2px solid black;
+    border: 1px solid;
     margin: 15px;
-    height: 40%;
+  
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 207px;
+    height: 275px;
+    border: 1px solid;
+}
+img{
+    width: 130px;
+    height: 150px;
+    image-rendering:pixelated;
+}
+.li_produto{
+    list-style: none;
+}
+h2{
+    font-size: 20px;
+    color: #1B1B1B;
+    margin: 20px;
+}
+.h3_title{
+    font-size: 20px;
+    color: #1B1B1B;
+}
+.p_preco{
+    font-size: 16px;
+    color: #868383;
 }
