@@ -34,20 +34,77 @@ let itens = [
         name: 'Sr Yoda',
         price: 'R$100,00',
         type: 'Action Figures'
-    }
-];
+    },
+    produto7 = {
+        image: './assets/img/actions/lilith.webp',
+        name: 'Lilith',
+        price: 'R$100,00',
+        type: 'Action Figures'
+    },
+    produto8 = {
+        image: './assets/img/actions/chibi.jpg',
+        name: 'Chibi Devil',
+        price: 'R$100,00',
+        type: 'Action Figures'
+    },
+    produto9 = {
+        image: './assets/img/actions/devil.jpg',
+        name: 'Blue',
+        price: 'R$100,00',
+        type: 'Action Figures'
+    },
+    produto10 = {
+        image: './assets/img/painting/agori.jpg',
+        name: 'Death Rune',
+        price: 'R$100,00',
+        type: 'Painting'
+    },
+    produto11 = {
+        image: './assets/img/painting/hellgound tibia.jpg',
+        name: 'HellHound',
+        price: 'R$100,00',
+        type: 'Painting'
+    },
+    produto12 = {
+        image: './assets/img/painting/inarius.png',
+        name: 'Inarius',
+        price: 'R$100,00',
+        type: 'Painting'
+    },
+    produto13 = {
+        image: './assets/img/painting/maltael.jpg',
+        name: 'HellHound',
+        price: 'R$100,00',
+        type: 'Painting'
+    },
+    produto14 = {
+        image: './assets/img/painting/tibia.jpg',
+        name: 'Tibia',
+        price: 'R$100,00',
+        type: 'Painting'
+    },
+]
+//ARRAYS PARA ARMAZENAR OS ITENS DE CADA CATEGORIA
+let listFigures = []
+let listFrames = []
+
+//CONSTANTES RECEBENDO/ACESSANDO AS CLASSES UL DIRETAMENTE DO HTML
+let SectionFrames = document.querySelector('.frames')
+let SectionFigures = document.querySelector('.figures')
 
 //ATRIBUINDO OS OBJETOS EM DIFERENTES ARRAYS QUE ATENDEREM AS CONDIÇÕES
 function separateItens(listC){
     for(let i = 0; i < listC.length; i++){
+        
         if (listC[i].type == 'Action Figures') {
             listFigures.push(listC[i])
-        }else{
+            
+        }else if(listC[i].type == 'Painting'){
             listFrames.push(listC[i])
         }
     }
 }
-separateItens()
+separateItens(itens)
 
 // UTILIZANDO O ARRAY "GAVETINHA", VOU CRIAR OS ELEMENTOS E SETAR NA SECTION
 function listingCards(listC, UList) {
@@ -87,48 +144,11 @@ function listingCards(listC, UList) {
         //-------------------------------------------------------------------------//   
         //ADICIONANDO A <LI> AO PAI <UL>
         UList.appendChild(liProduto)
-
     }
 }
-listingCards(listFigures, SectionFigures)
+
 listingCards(listFrames, SectionFrames)
-
-//ARRAYS PARA ARMAZENAR OS ITENS DE CADA CATEGORIA
-let listFigures = []
-let listFrames = []
-
-//CONSTANTES RECEBENDO/ACESSANDO AS CLASSES UL DIRETAMENTE DO HTML
-let SectionFrames = document.querySelector('.frames')
-let SectionFigures = document.querySelector('.figures')
+listingCards(listFigures, SectionFigures)
 
 
 
-
-//     //CRIANDO VARIAVEIS PARA ARMAZENAS OS VALORES/ELEMENTOS
-//     let cardList = document.createElement('li')
-//     let cardItem = document.createElement('div') //CONTAINER DE TODOS ELEMENTOS ABAIXO
-// // ----------------------------------------------------
-//     let imgBox = document.createElement('div')
-//     let img = document.createElement('img')
-//     let nameProduct = document.createElement('p')
-//     let priceProduct = document.createElement('p')
-// // ----------------------------------------------------
-//     //ADICIONANDO OS VALORES
-//     img.src = listC[i].image
-//     nameProduct.innerHTML = listC[i].name
-//     priceProduct.innerHTML = listC[i].price
-
-//     //ATRIBUINDO CLASSES AOS ELEMENTOS
-//     cardList.className = 'li_Figures'
-//     cardItem.className = 'card_item'
-//     imgBox.className = 'img_box'
-//     nameProduct.className = 'product_name' 
-//     priceProduct.className = 'product_price'
-    
-//     //INSERINDO OS APPENDS FILHOS NA BOX PAI
-//     uList.appendChild(cardList)             //UL > LI
-//     cardList.appendChild(cardItem)          //LI > DIV CONTAINER
-//     cardItem.appendChild(imgBox)            //LI > DIV CONTAINER > DIV IMG
-//     imgBox.appendChild(img)                 //LI > DIV CONTAINER > DIV IMG > IMG
-//     cardItem.appendChild(nameProduct)       //LI > DIV CONTAINER > NOME
-//     cardItem.appendChild(priceProduct)      //LI > DIV CONTAINER > PRICE
